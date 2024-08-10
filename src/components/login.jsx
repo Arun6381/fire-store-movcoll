@@ -52,7 +52,7 @@ export const Login = () => {
   return (
     <>
       {!sign ? (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+        <div className="flex flex-col items-center justify-center min-h-screen  bg-gradient-to-r from-blue-200 to-purple-200">
           <h1 className="text-4xl font-bold mb-8">Login</h1>
           <form onSubmit={handleLogin} className="w-full max-w-sm">
             <input
