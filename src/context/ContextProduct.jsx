@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // MoviesContext.js
 
 import { createContext, useContext, useState, useEffect } from "react";
@@ -77,7 +78,7 @@ export const MoviesProvider = ({ children }) => {
 
   const deleteMovie = async (id) => {
     try {
-      setLoading(true); // Start loading
+      setLoading(true);
       console.log("Deleting movie with ID: ", id);
       const movieDoc = doc(db, "movies", id);
       await deleteDoc(movieDoc);
@@ -85,7 +86,7 @@ export const MoviesProvider = ({ children }) => {
     } catch (err) {
       console.error("Error deleting movie: ", err);
     } finally {
-      setLoading(false); // End loading
+      setLoading(false);
     }
   };
 
